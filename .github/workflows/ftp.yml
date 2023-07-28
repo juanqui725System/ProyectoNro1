@@ -1,0 +1,15 @@
+on: push
+name: FTP
+jobs:
+  web-deploy:
+    name: Despliegue FTP
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v3          
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: url_ftp
+        username: juanqui725@gmail.com
+        password: Jc70401015
